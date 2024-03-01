@@ -1,0 +1,74 @@
+---
+id: INVOICE_HANDLING
+code: INVOICE_HANDLING
+name: Invoice Handling
+type: DEVELOPED
+smartTags:
+- "app:ocistreaming, app:ociobjectstorage, app:integration,style:app driven orchestration"
+- "app:rest, app:rest, app:erp,style:app driven orchestration"
+revision: 0
+projectRevision: 255
+status: ACTIVE
+createdBy: harris.qureshi@oracle.com
+createdDate: 2024-02-21T06:16:09.445+0000
+updatedBy: harris.qureshi@oracle.com
+updatedDate: 2024-02-21T06:16:09.445+0000
+latestBy: harris.qureshi@oracle.com
+latestDate: 2024-02-21T12:45:07.585+0000
+assets:
+  integrations:
+  - id: HQ_INVOICE_DOCUMENTUN|01.00.0000
+    name: HQ_Invoice_DocumentUnderstanding
+    revision: 13
+    updatedBy: harris.qureshi@oracle.com
+    updatedDate: 2024-02-21T11:14:03.944+0000
+  - id: HQ_SUBSCRIBE_STREAM|01.00.0000
+    name: HQ Subscribe Stream
+    revision: 10
+    updatedBy: harris.qureshi@oracle.com
+    updatedDate: 2024-02-21T11:14:38.399+0000
+  connections:
+  - id: HQ_AIDOCUMENTUNDERS
+    name: HQ_AIDocumentUnderstanding
+    revision: 8
+    updatedBy: harris.qureshi@oracle.com
+    updatedDate: 2024-02-21T07:24:55.361+0000
+  - id: HQ_ERP_CONNECTION
+    name: HQ ERP Connection
+    revision: 3
+    updatedBy: harris.qureshi@oracle.com
+    updatedDate: 2024-02-21T08:33:14.897+0000
+  - id: HQ_OCIOBJECTSTORAGE
+    name: HQ_OCIObjectStorage
+    revision: 4
+    updatedBy: harris.qureshi@oracle.com
+    updatedDate: 2024-02-21T07:27:28.197+0000
+  - id: HQ_STREAMING_ADAPTER
+    name: HQ Streaming Adapter
+    revision: 1
+    updatedBy: harris.qureshi@oracle.com
+    updatedDate: 2024-02-21T10:10:40.767+0000
+  - id: MY_REST_ENDPOINT_INTERFAC
+    name: Sample REST Endpoint Interface
+    revision: 0
+    updatedBy: harris.qureshi@oracle.com
+    updatedDate: 2024-02-21T06:40:44.914+0000
+  - id: PRESEEDED_COLLOCATED_CONN_1741
+    name: Local Integration
+    revision: 0
+    updatedBy: harris.qureshi@oracle.com
+    updatedDate: 2023-04-18T07:01:33.606+0000
+  - id: PRESEEDED_OBJECT_STORE_CONN_1741
+    name: PRESEEDED_OBJECT_STORE_CONN_1741
+    revision: 1
+    updatedBy: valeria.chiran@oracle.com
+    updatedDate: 2023-10-23T13:59:35.950+0000
+  labels:
+  - id: AUTOMATEINVOICES
+    name: AutomateInvoices
+    revision: 0
+    updatedBy: harris.qureshi@oracle.com
+    updatedDate: 2024-02-21T12:45:07.585+0000
+origin:
+  tenantOCID: ocid1.tenancy.oc1..aaaaaaaazhrbolhypnxsm52biglv2khwwon6wdwie5wptlh6llyrw5dwpaqa
+  serviceInstanceOCID: ocid1.integrationinstance.oc1.eu-amsterdam-1.amaaaaaaqxuvomia62utb2vetdfbxm2xkoxc3nbtmgqyu5o5y4fkbpug2jeq

@@ -1,0 +1,18 @@
+<adapter-config xsdTargetNamespace="http://xmlns.oracle.com/cloud/adapter/stagefile/WriteFile_REQUEST/types" name="WriteFile_REQUESTPortType" adapter="stagefile" wsdlLocation="WriteFile_REQUEST.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  <connection-factory location="ics/FileAdapter">
+    <non-managed-connection managedConnectionFactoryClassName="oracle.tip.adapter.file.FileManagedConnectionFactory"/>
+  </connection-factory>
+  <endpoint-activation portType="WriteFile_REQUESTPortType" operation="Read">
+    <activation-spec className="oracle.tip.adapter.file.inbound.FileActivationSpec">
+      <property name="FileRefProcessingEnabled" value="true"/>
+      <property name="HeterogeneousSchema" value="true"/>
+      <property name="ICSUploadSchemaElement" value="opaqueElement"/>
+      <property name="ICSUploadSchemaElementNameSpace" value="http://xmlns.oracle.com/pcbpel/adapter/opaque/"/>
+      <property name="OpaqueSchema" value="false"/>
+      <property name="Operation" value="ReadWithOutChunk"/>
+      <property name="RemoveLastRows" value="0"/>
+      <property name="decryptContent" value="false"/>
+      <property name="publishExtendedDataTypes" value="true"/>
+    </activation-spec>
+  </endpoint-activation>
+</adapter-config>

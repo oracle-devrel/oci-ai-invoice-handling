@@ -1,0 +1,46 @@
+<adapter-config xsdTargetNamespace="http://xmlns.oracle.com/cloud/adapter/REST/execute_REQUEST/types" name="execute_REQUESTPortType" adapter="REST" wsdlLocation="execute_REQUEST.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  <connection-factory location="cloud/CloudAdapter">
+    <non-managed-connection managedConnectionFactoryClassName="oracle.cloud.connector.rest.RestAdapterConnectionFactory">
+      <property name="cloud.adapter.plugin.version" value="23.3.5"/>
+      <property name="cloud.adapter.sdk.version" value="23.3.5"/>
+      <property name="rest.inbound.security.configurable" value="true"/>
+      <property name="security" value="oracle/multi_token_rest_service_policy"/>
+      <property name="securityPolicy" value="MULTI_TOKEN_INBOUND"/>
+    </non-managed-connection>
+  </connection-factory>
+  <endpoint-activation portType="execute_REQUESTPortType" operation="execute">
+    <activation-spec className="oracle.tip.adapter.cloud.CloudActivationSpec">
+      <property name="targetOperation" value="execute"/>
+      <property name="HTTPHeadersAdded" value="true"/>
+      <property name="HttpVerb" value="POST"/>
+      <property name="QueryParameters" value="tracker"/>
+      <property name="RequestElementNS" value="http://xmlns.oracle.com/cloud/adapter/REST/execute/types"/>
+      <property name="RequestElementName" value="request-wrapper"/>
+      <property name="RequestMediaType" value="application/json"/>
+      <property name="RequestSample" value="{&quot;InLineData&quot;:&quot;base64&quot;}"/>
+      <property name="ResourceURI" value="/execute"/>
+      <property name="ResponseElementNS" value="http://xmlns.oracle.com/cloud/adapter/REST/execute/types"/>
+      <property name="ResponseElementName" value="response-wrapper"/>
+      <property name="ResponseMediaType" value="application/json"/>
+      <property name="ResponseSample" value="{  &quot;detectedDocument&quot;: [   {    &quot;documentType&quot;: &quot;INVOICE&quot;,    &quot;confidence&quot;: 0.9968323,    &quot;invoice_id&quot;: 122,    &quot;documentName&quot;: &quot;quote-anon.pdf&quot;,    &quot;tracker_id&quot;: &quot;234&quot;,    &quot;instanceid&quot;: &quot;2333&quot;   }  ],  &quot;documentFields&quot;: [   {    &quot;InvoiceId&quot;: &quot;INV-10012&quot;,    &quot;InvoiceIdconfidence&quot;: 0.99220127,    &quot;InvoiceDate&quot;: &quot;26/3/2021&quot;,    &quot;InvoiceDateconfidence&quot;: 0.99220127,    &quot;InvoiceTotal&quot;: &quot;$1,699.48&quot;,    &quot;InvoiceTotalconfidence&quot;: 0.9909812,    &quot;VendorName&quot;: &quot;YOUR COMPANY&quot;,    &quot;VendorNameconfidence&quot;: 0.99265885,    &quot;VendorAddress&quot;: &quot;1234 Your Street City, California 90210 United States&quot;,    &quot;VendorAddressconfidence&quot;: 0.99265885   }  ] }"/>
+      <property name="activationSpecClass" value="oracle.tip.adapter.cloud.CloudActivationSpec"/>
+      <property name="allowChangeDefaultNamespace" value="false"/>
+      <property name="copyFaultFromModel" value="true"/>
+      <property name="forceWsdlTypesBuild" value="true"/>
+      <property name="generateConnectivityPropertiesInboundRequest" value="RESTINREQ"/>
+      <property name="generateConnectivityPropertiesInboundResponse" value="RESTINRES"/>
+      <property name="generateInboundCredentials" value="true"/>
+      <property name="generatePartnerLink" value="false"/>
+      <property name="integrationSchemaNamespace" value="http://xmlns.oracle.com/cloud/adapter/REST/execute_REQUEST/types"/>
+      <property name="integrationWSDLNamespace" value="http://xmlns.oracle.com/cloud/adapter/REST/execute_REQUEST"/>
+      <property name="invocationStyle" value="REQUEST_RESPONSE"/>
+      <property name="isRequestJsonSchema" value="false"/>
+      <property name="isRequestRawBytes" value="false"/>
+      <property name="isResponseJsonSchema" value="false"/>
+      <property name="isResponseRawBytes" value="false"/>
+      <property name="operations" value="default"/>
+      <property name="postQueryParamsAsContent" value="false"/>
+      <property name="requestJsonTopLevelArray" value="false"/>
+    </activation-spec>
+  </endpoint-activation>
+</adapter-config>
