@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<oracle-xsl-webmapper:StateInfo xmlns:oracle-xsl-webmapper="http://www.oracle.com/xsl/webmapper/state" version="1.1">
+    <oracle-xsl-webmapper:ErrorsCount>0</oracle-xsl-webmapper:ErrorsCount>
+    <oracle-xsl-webmapper:WarningsCount>0</oracle-xsl-webmapper:WarningsCount>
+    <oracle-xsl-webmapper:IsImported>false</oracle-xsl-webmapper:IsImported>
+    <oracle-xsl-webmapper:HasMappings>true</oracle-xsl-webmapper:HasMappings>
+    <oracle-xsl-webmapper:StateInfoIsStale>false</oracle-xsl-webmapper:StateInfoIsStale>
+    <oracle-xsl-webmapper:SourcesReferenced>
+        <element xmlns:ns3="http://xmlns.oracle.com/cloud/adapter/stagefile/stageReadResult_REQUEST/types">ns3:ReadResponse</element>
+        <uriAbsoluteLocation>file:/tmp/WC/itg_e5228f14-2d93-49bf-8ba0-f8d490f9ceac/resources/processor_1459/resourcegroup_1460/stageReadResult_REQUEST.wsdl</uriAbsoluteLocation>
+        <param>stageReadResult</param>
+        <primary>false</primary>
+    </oracle-xsl-webmapper:SourcesReferenced>
+    <oracle-xsl-webmapper:AllSources>
+        <element xmlns:ns3="http://xmlns.oracle.com/cloud/adapter/REST/execute_REQUEST/types">ns3:execute</element>
+        <uriAbsoluteLocation>file:/tmp/WC/itg_e5228f14-2d93-49bf-8ba0-f8d490f9ceac/resources/application_23/outbound_24/resourcegroup_25/execute_REQUEST.wsdl</uriAbsoluteLocation>
+        <primary>true</primary>
+    </oracle-xsl-webmapper:AllSources>
+    <oracle-xsl-webmapper:AllSources>
+        <element xmlns:ns3="http://xmlns.oracle.com/cloud/adapter/stagefile/stageReadResult_REQUEST/types">ns3:ReadResponse</element>
+        <uriAbsoluteLocation>file:/tmp/WC/itg_e5228f14-2d93-49bf-8ba0-f8d490f9ceac/resources/processor_1459/resourcegroup_1460/stageReadResult_REQUEST.wsdl</uriAbsoluteLocation>
+        <param>stageReadResult</param>
+        <primary>false</primary>
+    </oracle-xsl-webmapper:AllSources>
+</oracle-xsl-webmapper:StateInfo>

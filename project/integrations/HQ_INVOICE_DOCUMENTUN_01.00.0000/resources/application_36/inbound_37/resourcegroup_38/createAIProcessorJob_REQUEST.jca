@@ -1,0 +1,45 @@
+<adapter-config xsdTargetNamespace="http://xmlns.oracle.com/cloud/adapter/REST/createAIProcessorJob_REQUEST/types" name="createAIProcessorJob_REQUESTPortType" adapter="rest" wsdlLocation="createAIProcessorJob_REQUEST.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  <connection-factory location="cloud/CloudAdapter">
+    <non-managed-connection managedConnectionFactoryClassName="oracle.cloud.connector.rest.RestAdapterConnectionFactory">
+      <property name="cloud.adapter.plugin.version" value="21.2.1"/>
+      <property name="cloud.adapter.sdk.version" value="21.2.1"/>
+      <property name="connectionUrl" value="%%HQ_AIDOCUMENTUNDERS_connectionUrl"/>
+      <property name="csfMap" value="oracle.cloud.adapter"/>
+      <property name="csfkey" value="41f7916a365c9e6143083ee08c0a4e849ed8d020b73951c48669e9b97c609fec"/>
+      <property name="securityPolicy" value="OCI_SIGNATURE_VERSION1"/>
+    </non-managed-connection>
+  </connection-factory>
+  <endpoint-interaction portType="createAIProcessorJob_REQUESTPortType" operation="execute">
+    <interaction-spec className="oracle.tip.adapter.cloud.CloudInteractionSpec">
+      <property name="targetOperation" value="execute"/>
+      <property name="operationPath" value="http://xmlns.oracle.com/cloud/adapter/REST/createAIProcessorJob_REQUEST/execute"/>
+      <property name="HTTPHeadersAdded" value="true"/>
+      <property name="HttpVerb" value="POST"/>
+      <property name="RequestElementNS" value="http://xmlns.oracle.com/cloud/adapter/REST/createAIProcessorJob/types"/>
+      <property name="RequestElementName" value="request-wrapper"/>
+      <property name="RequestMediaType" value="application/json"/>
+      <property name="RequestSample" value="{   &quot;processorConfig&quot; : {     &quot;processorType&quot; : &quot;GENERAL&quot;,     &quot;documentType&quot; : &quot;INVOICE&quot;, &quot;normalizationFields&quot;: {             &quot;map&quot;: {                 &quot;INVOICE_TOTAL&quot;: {                     &quot;type&quot;: &quot;CURRENCY&quot;                 },                 &quot;INVOICE_DATE&quot;: {                     &quot;type&quot;: &quot;DATE&quot;                 }             }       },     &quot;features&quot; : [ {       &quot;modelId&quot; : &quot;ocid1.aidocumentmodel.oc1.eu-frankfurt-1.amaaaaaangencdyafwvxz27le2esgvwx6ms6lr3hq6f3mprnyk5bzsisx3za&quot;,       &quot;featureType&quot; : &quot;KEY_VALUE_EXTRACTION&quot;     } ],     &quot;isZipOutputEnabled&quot; : false   },   &quot;compartmentId&quot; : &quot;ocid1.compartment.oc1..aaaaaaaae3n6r6hrjipbap2hojicrsvkzatrtlwvsyrpyjd7wjnw4za3m75q&quot;,   &quot;inputLocation&quot; : {     &quot;sourceType&quot; : &quot;INLINE_DOCUMENT_CONTENT&quot;,     &quot;data&quot; : &quot;......&quot;   },   &quot;outputLocation&quot; : {     &quot;namespaceName&quot; : &quot;frqap2zhtzbe&quot;,     &quot;bucketName&quot; : &quot;AON-Doc-KV-Demo&quot;,     &quot;prefix&quot; : &quot;hq-&quot;   } }"/>
+      <property name="ResourceURI" value="/processorJobs"/>
+      <property name="ResponseElementNS" value="http://xmlns.oracle.com/cloud/adapter/REST/createAIProcessorJob/types"/>
+      <property name="ResponseElementName" value="response-wrapper"/>
+      <property name="ResponseMediaType" value="application/json"/>
+      <property name="ResponseSample" value="{     &quot;id&quot;: &quot;ocid1.aidocumentprocessorjob.oc1.eu-frankfurt-1.amaaaaaangencdyamponadbqa7ud3srakarwvbuyqszwwo7g3tb3anvlyldq&quot;,     &quot;compartmentId&quot;: &quot;ocid1.compartment.oc1..aaaaaaaae3n6r6hrjipbap2hojicrsvkzatrtlwvsyrpyjd7wjnw4za3m75q&quot;,     &quot;displayName&quot;: null,     &quot;features&quot;: [         {             &quot;featureType&quot;: &quot;KEY_VALUE_EXTRACTION&quot;,             &quot;modelId&quot;: &quot;ocid1.aidocumentmodel.oc1.eu-frankfurt-1.amaaaaaangencdyafwvxz27le2esgvwx6ms6lr3hq6f3mprnyk5bzsisx3za&quot;         }     ],     &quot;language&quot;: null,     &quot;documentType&quot;: null,     &quot;inputLocation&quot;: {         &quot;sourceType&quot;: &quot;INLINE_DOCUMENT_CONTENT&quot;,         &quot;data&quot;:&quot;....&quot;     },     &quot;timeAccepted&quot;: &quot;2023-01-09T09:53:37.404Z&quot;,     &quot;timeStarted&quot;: &quot;2023-01-09T09:53:37.404Z&quot;,     &quot;timeFinished&quot;: &quot;2023-01-09T09:53:37.404Z&quot;,     &quot;percentComplete&quot;: 100.0,     &quot;outputLocation&quot;: {         &quot;namespaceName&quot;: &quot;frqap2zhtzbe&quot;,         &quot;bucketName&quot;: &quot;AON-Doc-KV-Demo&quot;,         &quot;prefix&quot;: &quot;KV-Results&quot;     },     &quot;lifecycleState&quot;: &quot;SUCCEEDED&quot;,     &quot;isZipOutputEnabled&quot;: false,     &quot;lifecycleDetails&quot;: null }"/>
+      <property name="allowChangeDefaultNamespace" value="false"/>
+      <property name="connectionType" value="restapi"/>
+      <property name="copyFaultFromModel" value="true"/>
+      <property name="forceWsdlTypesBuild" value="true"/>
+      <property name="generateConnectivityPropertiesOutboundRequest" value="RESTOUTREQ"/>
+      <property name="generateConnectivityPropertiesOutboundResponse" value="RESTOUTRES"/>
+      <property name="generatePartnerLink" value="false"/>
+      <property name="integrationSchemaNamespace" value="http://xmlns.oracle.com/cloud/adapter/REST/createAIProcessorJob_REQUEST/types"/>
+      <property name="integrationWSDLNamespace" value="http://xmlns.oracle.com/cloud/adapter/REST/createAIProcessorJob_REQUEST"/>
+      <property name="interactionSpecClass" value="oracle.tip.adapter.cloud.CloudInteractionSpec"/>
+      <property name="invocationStyle" value="REQUEST_RESPONSE"/>
+      <property name="isRequestRawBytes" value="false"/>
+      <property name="isResponseRawBytes" value="false"/>
+      <property name="operations" value="default"/>
+      <property name="postQueryParamsAsContent" value="false"/>
+      <property name="requestJsonTopLevelArray" value="false"/>
+    </interaction-spec>
+  </endpoint-interaction>
+</adapter-config>

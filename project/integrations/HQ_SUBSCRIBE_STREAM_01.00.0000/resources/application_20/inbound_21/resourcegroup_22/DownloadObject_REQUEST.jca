@@ -1,0 +1,31 @@
+<adapter-config xsdTargetNamespace="http://xmlns.oracle.com/cloud/adapter/ociobjectstorage/DownloadObject/types" name="DownloadObject_REQUESTPortType" adapter="ociobjectstorage" wsdlLocation="DownloadObject_REQUEST.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  <connection-factory location="cloud/CloudAdapter">
+    <non-managed-connection managedConnectionFactoryClassName="oracle.tip.tools.adapters.cloud.ociobjectstorage.OCIObjectStorageAdapterConnectionFactory">
+      <property name="applicationVersion" value="1.0"/>
+      <property name="csfMap" value="oracle.cloud.adapter"/>
+      <property name="csfkey" value="233ae2badc5abba4a087af6afe4a8e4512e7404fc9be6921f3f51c5081c45a21"/>
+    </non-managed-connection>
+  </connection-factory>
+  <endpoint-interaction portType="DownloadObject_REQUESTPortType" operation="Get_Object">
+    <interaction-spec className="oracle.tip.adapter.cloud.CloudInteractionSpec">
+      <property name="targetOperation" value="Get_Object"/>
+      <property name="operationPath" value="https://objectstorage.*_REGION_*.*_REALM_*/n/*_NAMESPACE_*/b/*_BUCKET_*/o/{objectName}"/>
+      <property name="enforceResponseSizeRestriction" value="true"/>
+      <property name="oic.gen3.invoke" value="true"/>
+      <property name="ActionType" value="objectStorageObjects"/>
+      <property name="HttpVerb" value="GET"/>
+      <property name="ResourceURI" value="https://objectstorage.eu-amsterdam-1.oraclecloud.com/n/ax7mdu0gdtqa/b/*_BUCKET_*/o/{objectName}"/>
+      <property name="ResponseElementNS" value="http://xmlns.oracle.com/cloud/ics/binary/v1/types"/>
+      <property name="ResponseElementName" value="streamReference"/>
+      <property name="ResponseMediaType" value="application/octet-stream"/>
+      <property name="attachmentXpathInfo" value="//*[namespace-uri()='http://xmlns.oracle.com/cloud/adapter/ociobjectstorage/DownloadObject/types' and local-name()='Invoke']/*[namespace-uri()='http://xmlns.oracle.com/cloud/ics/binary/v1/types' and local-name()='streamReference']"/>
+      <property name="bucketName" value="hq-invoices"/>
+      <property name="compartmentId" value="ocid1.compartment.oc1..aaaaaaaao2e7z6dsl6t77kaf2i3z2tjhg4splxti5fdotlsehlzmsf4m5jbq"/>
+      <property name="integrationSchemaNamespace" value="http://xmlns.oracle.com/cloud/adapter/ociobjectstorage/DownloadObject/types"/>
+      <property name="integrationWSDLNamespace" value="http://xmlns.oracle.com/cloud/adapter/ociobjectstorage/DownloadObject"/>
+      <property name="isResponseRawBytes" value="true"/>
+      <property name="operation" value="Get_Object"/>
+      <property name="region" value="eu-amsterdam-1"/>
+    </interaction-spec>
+  </endpoint-interaction>
+</adapter-config>

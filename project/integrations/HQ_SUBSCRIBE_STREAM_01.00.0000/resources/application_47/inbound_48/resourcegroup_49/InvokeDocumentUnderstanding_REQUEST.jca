@@ -1,0 +1,45 @@
+<adapter-config xsdTargetNamespace="http://xmlns.oracle.com/cloud/adapter/collocatedics/InvokeDocumentUnderstanding_REQUEST/types" name="InvokeDocumentUnderstanding_REQUESTPortType" adapter="collocatedics" wsdlLocation="InvokeDocumentUnderstanding_REQUEST.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  <connection-factory location="cloud/CloudAdapter">
+    <non-managed-connection managedConnectionFactoryClassName="oracle.cloud.connector.rest.RestAdapterConnectionFactory">
+      <property name="applicationVersion" value="1.0"/>
+      <property name="cloud.adapter.plugin.version" value="18.1.5"/>
+      <property name="cloud.adapter.sdk.version" value="18.1.5"/>
+      <property name="securityPolicy" value="NONE"/>
+    </non-managed-connection>
+  </connection-factory>
+  <endpoint-interaction portType="InvokeDocumentUnderstanding_REQUESTPortType" operation="POST">
+    <interaction-spec className="oracle.tip.adapter.cloud.CloudInteractionSpec">
+      <property name="targetOperation" value="POST"/>
+      <property name="operationPath" value="/execute"/>
+      <property name="enforceResponseSizeRestriction" value="true"/>
+      <property name="oic.gen3.invoke" value="true"/>
+      <property name="EndpointPropertiesHandler" value="oracle.cloud.connector.ics.ICSAdapterEndpointPropertiesHandler"/>
+      <property name="HTTPHeadersAdded" value="true"/>
+      <property name="HttpVerb" value="POST"/>
+      <property name="QueryParameters" value=""/>
+      <property name="RequestElementNS" value="http://xmlns.oracle.com/cloud/adapter/collocatedics/InvokeDocumentUnderstanding_REQUEST/types"/>
+      <property name="RequestElementName" value="components.schemas.request-wrapper"/>
+      <property name="RequestMediaType" value="application/json"/>
+      <property name="ResourceName" value="/execute"/>
+      <property name="ResourceURI" value="/execute"/>
+      <property name="ResponseElementNS" value="http://xmlns.oracle.com/cloud/adapter/collocatedics/InvokeDocumentUnderstanding_REQUEST/types"/>
+      <property name="ResponseElementName" value="components.schemas.response-wrapper"/>
+      <property name="ResponseMediaType" value="application/json"/>
+      <property name="allowChangeDefaultNamespace" value="false"/>
+      <property name="connectionType" value="openapi"/>
+      <property name="generateConnectivityPropertiesOutboundRequest" value="SKIPOUTREQ"/>
+      <property name="generatePartnerLink" value="false"/>
+      <property name="integrationContext" value="INTRA_PROJECT"/>
+      <property name="integration_code" value="HQ_INVOICE_DOCUMENTUN"/>
+      <property name="integration_created" value="2024-02-21T09:52:19.557+0000"/>
+      <property name="integration_id" value="HQ_INVOICE_DOCUMENTUN|01.00.0000"/>
+      <property name="integration_name" value="HQ_Invoice_DocumentUnderstanding"/>
+      <property name="integration_operation" value="POST"/>
+      <property name="integration_service" value="/execute"/>
+      <property name="integration_version" value="01.00.0000"/>
+      <property name="operation" value="POST"/>
+      <property name="resources" value="/execute"/>
+      <property name="serviceType" value="rest"/>
+    </interaction-spec>
+  </endpoint-interaction>
+</adapter-config>

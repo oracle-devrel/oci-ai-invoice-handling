@@ -1,0 +1,55 @@
+<adapter-config xsdTargetNamespace="http://xmlns.oracle.com/cloud/adapter/erp/CreateInvoiceERPCloud_REQUEST/types" name="CreateInvoiceERPCloud_REQUESTPortType" adapter="erp" wsdlLocation="CreateInvoiceERPCloud_REQUEST.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  <connection-factory location="cloud/CloudAdapter">
+    <non-managed-connection managedConnectionFactoryClassName="oracle.cloud.connector.fa.FAConnectionFactory">
+      <property name="Host" value="%%null_Host"/>
+      <property name="applicationVersion" value="1.0"/>
+      <property name="cloud.adapter.plugin.version" value="23.04.1"/>
+      <property name="cloud.adapter.sdk.version" value="23.04.1"/>
+      <property name="csfMap" value="oracle.cloud.adapter"/>
+      <property name="csfkey" value="ae35db4540905014dc1bf740e7dabc5fa244d2badf18f0184c0a572fddad281c"/>
+      <property name="endpointType" value="REST"/>
+      <property name="eventCatalogURL" value="%%null_eventCatalogURL"/>
+      <property name="interfaceCatalogURL" value="%%null_interfaceCatalogURL"/>
+      <property name="lastSaved" value="2024.02.21.07.45.09"/>
+      <property name="privateEndpoint" value="false"/>
+      <property name="restResourceURIs" value=""/>
+      <property name="securityPolicy" value="USERNAME_PASSWORD"/>
+      <property name="serviceEndpoints" value="%%null_serviceEndpoints"/>
+      <property name="targetWSDLURL" value="%%null_targetWSDLURL"/>
+    </non-managed-connection>
+  </connection-factory>
+  <endpoint-interaction portType="CreateInvoiceERPCloud_REQUESTPortType" operation="create">
+    <interaction-spec className="oracle.tip.adapter.cloud.CloudInteractionSpec">
+      <property name="targetOperation" value="create"/>
+      <property name="enforceResponseSizeRestriction" value="true"/>
+      <property name="oic.gen3.invoke" value="true"/>
+      <property name="Attachment" value="false"/>
+      <property name="RequestElementNS" value="http://xmlns.oracle.com/cloud/adapter/erp/CreateInvoiceERPCloud_REQUEST/types"/>
+      <property name="RequestElementName" value="Invoices"/>
+      <property name="ResponseElementNS" value="http://xmlns.oracle.com/cloud/adapter/erp/CreateInvoiceERPCloud_REQUEST/types"/>
+      <property name="ResponseElementName" value="Invoices"/>
+      <property name="RestApplication" value="{http://xmlns.oracle.com/cloud/adapters}fscmRestApp"/>
+      <property name="abstractComplexType" value="true"/>
+      <property name="browseBySelection" value="browseByServiceRest"/>
+      <property name="cherryPickChildResources" value="true"/>
+      <property name="collectionResource" value="true"/>
+      <property name="copyDescendantTypes" value="true"/>
+      <property name="copyDescendantTypesFullTraverse" value="true"/>
+      <property name="dffTypes" value="invoiceDistributionGdf=http://xmlns.oracle.com/cloud/adapters/fscmRestApp/Invoices/invoiceLines/invoiceDistributions/invoiceDistributionGdf;invoiceLineGdf=http://xmlns.oracle.com/cloud/adapters/fscmRestApp/Invoices/invoiceLines/invoiceLineGdf;invoiceLineProjectDff=http://xmlns.oracle.com/cloud/adapters/fscmRestApp/Invoices/invoiceLines/invoiceLineProjectDff;invoiceDistributionProjectDff=http://xmlns.oracle.com/cloud/adapters/fscmRestApp/Invoices/invoiceLines/invoiceDistributions/invoiceDistributionProjectDff"/>
+      <property name="enableHCMAPIBlacklisting" value="true"/>
+      <property name="generateConnectivityPropertiesOutboundRequest" value="RESTOUTREQ"/>
+      <property name="httpVerb" value="POST"/>
+      <property name="importDescendantSchema" value="true"/>
+      <property name="integrationSchemaNamespace" value="http://xmlns.oracle.com/cloud/adapter/erp/CreateInvoiceERPCloud_REQUEST/types"/>
+      <property name="integrationWSDLNamespace" value="http://xmlns.oracle.com/cloud/adapter/erp/CreateInvoiceERPCloud_REQUEST"/>
+      <property name="operationDisplayName" value="create"/>
+      <property name="outboundRequestObject" value="{http://xmlns.oracle.com/cloud/adapters/fscmRestApp}Invoices"/>
+      <property name="outboundRequestOperation" value="{http://xmlns.oracle.com/cloud/adapters/fscmRestApp/Invoices/Collection}create"/>
+      <property name="referenceSourceSchemas" value="false"/>
+      <property name="resourceURI" value="https://fa-erzp-dev5-saasfademo1.ds-fa.oraclepdemos.com:443/fscmRestApi/resources/11.13.18.05/invoices"/>
+      <property name="selectedAction" value="CRUD"/>
+      <property name="selectedChildResources" value="invoiceLines"/>
+      <property name="skipChildGenerationOnCycle" value="true"/>
+    </interaction-spec>
+  </endpoint-interaction>
+</adapter-config>

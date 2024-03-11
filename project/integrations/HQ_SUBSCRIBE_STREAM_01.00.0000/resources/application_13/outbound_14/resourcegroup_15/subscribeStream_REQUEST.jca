@@ -1,0 +1,42 @@
+<adapter-config xsdTargetNamespace="http://xmlns.oracle.com/cloud/adapter/ocistreaming/subscribeStream_REQUEST/types" adapterType="poll" name="subscribeStream_REQUESTPortType" adapter="ocistreaming" wsdlLocation="subscribeStream_REQUEST.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  <connection-factory location="cloud/CloudAdapter">
+    <non-managed-connection managedConnectionFactoryClassName="oracle.cloud.connector.ocistreaming.OCIStreamingConnectionFactory">
+      <property name="applicationVersion" value="1.0"/>
+      <property name="cloud.adapter.plugin.version" value="20.3.1"/>
+      <property name="cloud.adapter.sdk.version" value="18.1.5"/>
+      <property name="cloudPollingEndpoint" value="true"/>
+      <property name="connectionUrl" value="%%HQ_STREAMING_ADAPTER_connectionUrl"/>
+      <property name="csfMap" value="oracle.cloud.adapter"/>
+      <property name="csfkey" value="f4f98c48c7bfd2cb02d3be4a224b7e637d9bbd8ac86a454ab66b9f5e9e5447df"/>
+      <property name="inboundPoll" value="true"/>
+      <property name="privateEndpoint" value="false"/>
+      <property name="securityPolicy" value="SASLPLAIN_OVER_SSL_OSS"/>
+    </non-managed-connection>
+  </connection-factory>
+  <endpoint-activation portType="subscribeStream_REQUESTPortType" operation="Receive">
+    <activation-spec className="oracle.tip.adapter.cloud.CloudActivationSpec">
+      <property name="targetOperation" value="Receive"/>
+      <property name="ConnectionId" value="HQ_STREAMING_ADAPTER"/>
+      <property name="GroupId" value="OICDoc"/>
+      <property name="MaxPollRecords" value="1"/>
+      <property name="MessageCompressionType" value="GZIP"/>
+      <property name="MessageType" value="STRING"/>
+      <property name="MessagingAPI" value="CONSUME"/>
+      <property name="NumberOfJobs" value="3"/>
+      <property name="OpaqueSchema" value="false"/>
+      <property name="PayloadElement" value="content"/>
+      <property name="PayloadElementNS" value="http://xmlns.oracle.com/cloud/adapter/ocistreaming/subscribeStream/Receive/types"/>
+      <property name="PayloadFileName" value="sampleEvent.json"/>
+      <property name="PayloadSchemaSource" value="FILE"/>
+      <property name="PayloadType" value="JSON"/>
+      <property name="PollFrequency" value="10000"/>
+      <property name="RequestElement" value="Receive"/>
+      <property name="RequestElementNS" value="http://xmlns.oracle.com/cloud/adapter/ocistreaming/subscribeStream_REQUEST/types"/>
+      <property name="ResponseElement" value="ReceiveResponse"/>
+      <property name="ResponseElementNS" value="http://xmlns.oracle.com/cloud/adapter/ocistreaming/subscribeStream_REQUEST/types"/>
+      <property name="TopicMetadata" value="[TopicName=hq-invoices,Partitions={}]"/>
+      <property name="activationSpecClass" value="oracle.tip.adapter.cloud.CloudActivationSpec"/>
+      <property name="generateInboundCredentials" value="true"/>
+    </activation-spec>
+  </endpoint-activation>
+</adapter-config>
