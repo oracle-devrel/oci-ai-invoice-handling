@@ -1,5 +1,7 @@
 # Oracle AI Invoice Handling
 
+![](img/0-automating-invoice-handling-1024.jpg)
+
 ## Files for this solution
 
 The project files for this lab are found in the [`/project` directory](https://github.com/oracle-devrel/oci-ai-invoice-handling/tree/main/project).
@@ -13,18 +15,25 @@ The project files for this lab are found in the [`/project` directory](https://g
 This solution will demonstrate how to automate invoice handling using Oracle AI.
 
 
-Oracle AI is basically what helps your applications make sense of your data, and apply AI to help you use your data in new ways. Whether it’s preparing your data with AI so you can drive better analytics experiences, or using AI on top your data to help make the right decisions and predictions for your business. 
+Oracle AI is basically what helps your applications make sense of your data, and apply AI to help you use your data in new ways, whether it’s preparing your data with AI so you can drive better analytics experiences, or using AI on top your data to help make the right decisions and predictions for your business. 
 
 Oracle AI is built on experience with industries. As the world’s leading enterprise applications provider with more than 80 apps ranging from the ERP suite to HCM to vertical offerings like Primavera and Opera, Oracle has gained experience from working with thousands of customers to discover how customers want to use AI to improve their processes and results. The industry experience represented by our apps informs our AI as we integrate it into those apps to benefit users.
 
-Now you may already be familiar with our machine learning services – they have been around for a few years. The OCI Data Science offering provides you with a managed e2e environment for building, deploying and managing your machine learning models. Similarly, we have the Oracle Database Machine Learning, that offers you a complete data science environment that is optimized for performance in your Autonomous database or data warehouse. 
+You may already be familiar with our machine learning services – they have been around for a few years. The OCI Data Science offering provides a managed E2E environment for building, deploying and managing your machine learning models. Similarly, Oracle Database Machine Learning offers a complete data science environment that is optimized for performance in Autonomous database or data warehouse. 
 
-Today, we’re announcing a new services for data labeling, with a simple consistent experience making it easier to label your text or images and use those labels to customize your own machine learning models, and from there to build shared catalogs. 
+We've just announced a new service for data labeling, with a simple, consistent experience, making it easier to label your text or images and use those labels to customize your own machine learning models and build shared catalogs. 
 
 ## Overview
 
-![](img/0-automating-invoice-handling-1024.jpg)
+
 ![](img/1-ai-based-invoice-handling-1024.jpg)
+
+The steps we take in this demo are:
+
+1. Ingestion, whether through email, SFTP, or other means of ingesting invoices
+2. Automation, using Oracle Integration and Oracle Process automation, we process the invoices
+3. Using OCI Document Understanding and Object Storage, we classify and extract data from the invoices
+4. Lastly, we store the results using Autonomous Database
 
 ![](img/2-oracle-ai-platform-1024.jpg)
 
