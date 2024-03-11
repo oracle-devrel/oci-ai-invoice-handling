@@ -4,6 +4,10 @@
 
 The project files for this lab are found in the [`/project` directory](https://github.com/oracle-devrel/oci-ai-invoice-handling/tree/main/project).
 
+#### Video
+
+[![Automate Invoice Handling with OCI](http://img.youtube.com/vi/pjdQzFscOrk/0.jpg)](http://www.youtube.com/watch?v=pjdQzFscOrk "Automate Invoice Handling with OCI")
+
 #### Summary
 
 ![](img/0-automating-invoice-handling-1024.jpg)
